@@ -1,0 +1,45 @@
+name-template: "$COMPLETE"
+tag-template: "$COMPLETE"
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+
+template: |
+  ## Changes
+
+  $CHANGES
+
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+
+categories:
+  - title: "🚀 Features"
+    labels:
+      - "topic"
+  - title: "🐛 Bug Fixes"
+    labels:
+      - "bug"
+
+version-resolver:
+  major:
+    labels:
+      - "major"
+  minor:
+    labels:
+      - "minor"
+  patch:
+    labels:
+      - "patch"
+  default: patch
+
+prerelease: true
+prerelease-identifier: ""
+
+autolabeler:
+  # feature
+  - label: topic
+    branch:
+      - "/^topic[/-].+/"
+
+  # bug
+  - label: bug
+    branch:
+      - "/^bugfix[/-].+/"
+      - "/^hotfix[/-].+/"
