@@ -18,8 +18,6 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - run: bash --version
-
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -31,4 +29,3 @@ jobs:
           config-name: release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RESOLVED_VERSION: ${{ steps.generate-next-version.outputs.NV }}
