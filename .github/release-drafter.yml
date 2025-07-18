@@ -31,7 +31,7 @@ version-resolver:
   default: patch
 
 prerelease: true
-prerelease-identifier: ""
+prerelease-identifier: "rc"
 
 autolabeler:
   # feature
