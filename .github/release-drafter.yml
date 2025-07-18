@@ -1,6 +1,7 @@
-name-template: "$COMPLETE"
-tag-template: "$COMPLETE"
+name-template: "$RESOLVED_VERSION"
+tag-template: "$RESOLVED_VERSION"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+version-template: "$COMPLETE"
 
 template: |
   ## Changes
